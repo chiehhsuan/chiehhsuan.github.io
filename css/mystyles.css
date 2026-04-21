@@ -110,14 +110,19 @@ background-image: url('../assets/img/04162.jpeg')
     --radar-bg-color: rgba(11, 171, 168, 0.2);   /* 填充色：透明青色 */
 }
 
-/* 讓側邊選單的文字有縮放動畫 */
-.nav-link {
-    transition: transform 0.3s ease; /* 設定動畫時間為 0.3 秒，讓放大過程很順滑 */
-    display: inline-block;           /* 必須設定為 inline-block 縮放才會生效 */
+/* 讓網頁平滑捲動 */
+html {
+    scroll-behavior: smooth !important;
 }
 
-/* 當滑鼠移上去 (hover) 時的效果 */
+/* 側邊導覽文字放大效果 */
+.nav-link {
+    transition: transform 0.3s ease !important; /* 動畫平滑度 */
+    display: block !important;                  /* 確保放大空間 */
+    transform-origin: center left;              /* 從左側固定，向右放大 */
+}
+
 .nav-link:hover {
-    transform: scale(1.2);          /* 放大 1.2 倍，妳可以改成 1.1 或 1.3 調整大小 */
-    color: #ffffff !important;      /* 確保放大時顏色夠亮（可選） */
+    transform: scale(1.2) !important;          /* 放大 1.2 倍 */
+    color: #ffffff !important;                  /* 滑過時文字變純白 */
 }
