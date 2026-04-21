@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 /* --- 1. 更換全站字體 --- */
 /* 選取 body 和所有標題，以及 subheading，將字體設為思源黑體 */
 /* "Noto Sans TC" 必須對應我們在 HTML 中 <link> 引入的字體名稱 */
