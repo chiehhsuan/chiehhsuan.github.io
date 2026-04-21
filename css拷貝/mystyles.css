@@ -1,0 +1,108 @@
+/* --- 1. 更換全站字體 --- */
+/* 選取 body 和所有標題，以及 subheading，將字體設為思源黑體 */
+/* "Noto Sans TC" 必須對應我們在 HTML 中 <link> 引入的字體名稱 */
+body, h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, .subheading {
+font-family: "Noto Sans TC", sans-serif;
+text-transform: none; /* 取消模板預設的英文字母大寫 */
+}
+/* 範例中，我們保留 h2 的大寫樣式，讓區塊標題更顯眼 */
+h2 {
+text-transform: uppercase;
+}
+
+/* --- 2. 更換主題顏色 --- */
+/* :root 代表文件的根元素 (<html>) */
+/* 我們在這裡覆蓋 Bootstrap 預設的 CSS 變數 */
+:root {
+/* 將 --bs-primary-rgb (主色) 的 RGB 值改掉 */
+/* 範例使用的是 25, 25, 112 (深藍色) */
+--bs-primary-rgb: 11, 171, 200;
+/* (可選) 順便統一連結顏色 */
+--bs-link-color: rgb(11, 171, 200);
+--bs-link-hover-color: rgb(11, 171, 200);
+}
+/* (可選) 同步修改社群圖示的 hover 顏色 */
+.social-icons .social-icon:hover {
+background-color: rgb(11, 171, 200);
+}
+
+
+/* --- 3. 更換區塊背景 --- */
+/* 選取所有 .resume-section (履歷區塊) */
+.resume-section {
+/* 設定一個淡黃色背景 (rgb(255, 248, 220)) */
+background-color: rgb(255, 243, 243);
+background-image: url('../assets/img/04162.jpeg')
+/* 加上一個牆面材質的背景圖 (圖片路徑是相對於 CSS 檔案的位置) */
+/* background-image: url('../assets/img/white-wall-3-2.png'); */
+}
+
+/* 輪播容器背景框 */
+.carousel-item {
+    background-color: rgba(11, 171, 200, 0.1); /* 這裡用了你主題藍色的超淡色版 */
+    border-radius: 15px;
+    overflow: hidden; /* 確保內容不會超出圓點 */
+}
+
+/* 讓直式照片在框框內更美觀 */
+.carousel-item img {
+    max-height: 600px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+/* 將原本的 .text-primary.fw-bold 效果覆蓋掉，變成黑色加粗 */
+.fw-bold.text-primary {
+    color: #212529 !important; /* 強制變回深黑色 */
+    font-weight: 800 !important; /* 特粗 */
+    border-bottom: 2px solid rgba(11, 171, 200, 0.3); /* 選配：加個淡淡的底線會更有質感 */
+}
+
+/* 讓打字機的字體也稍微細一點，才不會跟名字搶戲 */
+#typewriter {
+    font-weight: 300;
+    color: #6c757d;
+}
+/* 1. 簡報外框樣式 */
+.ppt-frame {
+    border: 3px solid #000000; /* 黑色邊框 */
+    padding: 10px;             /* 內圈留白 */
+    background: #ffffff;       /* 白色底座 */
+    border-radius: 12px;       /* 圓角 */
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.1); /* 復古風陰影 */
+    transition: 0.3s;
+}
+
+/* 2. 重點字黑色加粗 (針對你之前問的黑色加粗) */
+.text-primary.fw-bold {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+/* 3. 簡報標題黑色加粗 */
+.ppt-title {
+    color: #000000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 雷達圖區塊的專屬樣式 */
+#skills-radar {
+    background-color: #f8f9fa; /* 淺灰色底，讓圖表更突出 */
+}
+
+/* 定義圖表容器的顏色 */
+.radar-container {
+    background: white;
+    border: 3px solid #000000; /* 跟你的簡報框一樣的黑框 */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 8px 8px 0px rgba(0,0,0,0.1); /* 復古風陰影 */
+}
+
+/* 這裡我們可以預設一個主題色，方便以後修改 */
+:root {
+    --radar-main-color: rgba(11, 171, 168, 1);    /* 主色：妳的青色 */
+    --radar-bg-color: rgba(11, 171, 168, 0.2);   /* 填充色：透明青色 */
+}
