@@ -17,13 +17,24 @@
         <link href="css/mystyles.css" rel="stylesheet" />
         <style>
             html { scroll-behavior: smooth; }
-            .nav-link { cursor: pointer; }
+            
+            /* 修正側邊欄文字：移除跳動，僅保留顏色變化 */
+            .navbar-nav .nav-item .nav-link {
+                transition: color 0.3s ease; /* 平滑過渡顏色 */
+                transform: none !important;  /* 強制取消任何位移 */
+                animation: none !important;  /* 強制取消任何動畫 */
+            }
+            .navbar-nav .nav-item .nav-link:hover {
+                color: #fff !important;      /* 滑鼠移入變白色，或改為你喜歡的顏色 */
+                background-color: rgba(255, 255, 255, 0.1); /* 輕微背景變化，不跳動 */
+            }
+
             .ppt-frame { 
                 box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
                 border-radius: 8px; 
                 overflow: hidden; 
                 background: #f8f9fa; 
-                max-width: 90%; /* 讓作品縮小一點 */
+                max-width: 90%; 
                 margin: 0 auto;
             }
             .project-note { 
@@ -180,7 +191,7 @@
                                         </div>
                                     </div>
                                     <p class="mt-2 fw-bold text-dark mb-0">廣告色彩分析</p>
-                                    <p class="project-note"><strong>[課程研究作品]</strong> 運用色彩心理學與視覺行銷理論，針對國際知名品牌廣告進行配色方案拆解。研究中分析了暖色調對點擊率的轉化影響，並透過數據對比，總結出如何透過色彩配置建立品牌專業感與消費信任感，提升整體廣告視覺張力。</p>
+                                    <p class="project-note"><strong>[課程研究作品]</strong> 運用色彩心理學與視覺行銷理論，針對國際知名品牌廣告進行配色方案拆解。研究中分析了暖色調對點擊率的轉化影響，並透過數據對比，總結出如何透過色彩配置建立品牌專業感與消費信任感。</p>
                                 </div>
                                 <div class="col-12 mb-4 text-center">
                                     <div class="ppt-frame">
@@ -189,7 +200,7 @@
                                         </div>
                                     </div>
                                     <p class="mt-2 fw-bold text-dark mb-0">議題研究與設計</p>
-                                    <p class="project-note"><strong>[社會議題探討]</strong> 本作品聚焦於數位原住民的社交行為變遷，透過資訊圖表(Infographic)將枯燥的學術調查數據視覺化。設計過程中注重資訊層級的引導與閱讀節奏的掌控，成功將複雜的社會議題轉化為具吸引力且易於理解的數位內容作品。</p>
+                                    <p class="project-note"><strong>[社會議題探討]</strong> 本作品聚焦於數位原住民的社交行為變遷，透過資訊圖表(Infographic)將枯燥的學術調查數據視覺化。設計過程中注重資訊層級的引導與閱讀節奏的掌控，成功將複雜的社會議題轉化為具吸引力且易於理解的數位作品。</p>
                                 </div>
                             </div>
                         </div>
